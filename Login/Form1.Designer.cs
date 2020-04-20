@@ -54,6 +54,7 @@
 			btnLogin.TabIndex = 3;
 			btnLogin.Text = "LOGIN";
 			btnLogin.UseVisualStyleBackColor = false;
+			btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
 			// 
 			// panel1
 			// 
