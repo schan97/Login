@@ -11,11 +11,11 @@ using System.Data.SqlClient;
 
 namespace Login
 {
-	public partial class Form1 : Form
+	public partial class LoginForm : Form
 	{
 		SqlConnection con = new SqlConnection();
 		SqlCommand com = new SqlCommand();
-		public Form1()
+		public LoginForm()
 		{
 			InitializeComponent();
 			con.ConnectionString = @"Data Source = (LocalDB)\LocalDBDemo; Initial Catalog = LoginDemo; Integrated Security = True";
