@@ -17,14 +17,38 @@ namespace Login
 			InitializeComponent();
 		}
 
-		private void Form1_Load(object sender, EventArgs e)
+		private void txtUsername_Enter(object sender, EventArgs e)
 		{
+			if(txtUsername.Text.Equals(@"Username / Email"))
+			{
+				txtUsername.Text = "";
+			}
 
 		}
 
-		private void pictureBox1_Click(object sender, EventArgs e)
+		private void txtUsername_Leave(object sender, EventArgs e)
 		{
+			if (txtUsername.Text.Equals(""))
+			{
+				txtUsername.Text = @"Username / Email";
+			}
 
+		}
+
+		private void txtPassword_Enter(object sender, EventArgs e)
+		{
+			if (txtPassword.Text.Equals("Password"))
+			{
+				txtPassword.Text = "";
+			}
+		}
+
+		private void txtPassword_Leave(object sender, EventArgs e)
+		{
+			if (txtPassword.Text.Equals(""))
+			{
+				txtPassword.Text = "Password";
+			}
 		}
 	}
 }

@@ -31,81 +31,16 @@
 			this.components = new System.ComponentModel.Container();
 			System.Windows.Forms.Button btnLogin;
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.panel2 = new System.Windows.Forms.Panel();
+			this.txtPassword = new System.Windows.Forms.TextBox();
+			this.txtUsername = new System.Windows.Forms.TextBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.panel2 = new System.Windows.Forms.Panel();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.txtUsername = new System.Windows.Forms.TextBox();
-			this.txtPassword = new System.Windows.Forms.TextBox();
 			btnLogin = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// panel1
-			// 
-			this.panel1.BackColor = System.Drawing.Color.White;
-			this.panel1.Controls.Add(btnLogin);
-			this.panel1.Controls.Add(this.txtPassword);
-			this.panel1.Controls.Add(this.txtUsername);
-			this.panel1.Controls.Add(this.pictureBox1);
-			this.panel1.Location = new System.Drawing.Point(107, 100);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(732, 378);
-			this.panel1.TabIndex = 0;
-			// 
-			// panel2
-			// 
-			this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
-			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel2.Location = new System.Drawing.Point(0, 0);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(960, 209);
-			this.panel2.TabIndex = 1;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Image = global::Login.Properties.Resources.user;
-			this.pictureBox1.Location = new System.Drawing.Point(301, 16);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(144, 126);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
-			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-			// 
-			// contextMenuStrip1
-			// 
-			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-			// 
-			// contextMenuStrip2
-			// 
-			this.contextMenuStrip2.Name = "contextMenuStrip2";
-			this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-			// 
-			// txtUsername
-			// 
-			this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtUsername.Location = new System.Drawing.Point(220, 178);
-			this.txtUsername.Multiline = true;
-			this.txtUsername.Name = "txtUsername";
-			this.txtUsername.Size = new System.Drawing.Size(306, 37);
-			this.txtUsername.TabIndex = 1;
-			this.txtUsername.Text = "Username / Email";
-			this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			// 
-			// txtPassword
-			// 
-			this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtPassword.Location = new System.Drawing.Point(220, 241);
-			this.txtPassword.Multiline = true;
-			this.txtPassword.Name = "txtPassword";
-			this.txtPassword.PasswordChar = '•';
-			this.txtPassword.Size = new System.Drawing.Size(306, 37);
-			this.txtPassword.TabIndex = 2;
-			this.txtPassword.Text = "Password";
-			this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// btnLogin
 			// 
@@ -120,6 +55,73 @@
 			btnLogin.Text = "LOGIN";
 			btnLogin.UseVisualStyleBackColor = false;
 			// 
+			// panel1
+			// 
+			this.panel1.BackColor = System.Drawing.Color.White;
+			this.panel1.Controls.Add(btnLogin);
+			this.panel1.Controls.Add(this.txtPassword);
+			this.panel1.Controls.Add(this.txtUsername);
+			this.panel1.Controls.Add(this.pictureBox1);
+			this.panel1.Location = new System.Drawing.Point(107, 100);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(732, 378);
+			this.panel1.TabIndex = 0;
+			// 
+			// txtPassword
+			// 
+			this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtPassword.Location = new System.Drawing.Point(220, 241);
+			this.txtPassword.Name = "txtPassword";
+			this.txtPassword.PasswordChar = '•';
+			this.txtPassword.Size = new System.Drawing.Size(306, 23);
+			this.txtPassword.TabIndex = 2;
+			this.txtPassword.Text = "Password";
+			this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+			this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
+			// 
+			// txtUsername
+			// 
+			this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtUsername.Location = new System.Drawing.Point(220, 178);
+			this.txtUsername.Margin = new System.Windows.Forms.Padding(10);
+			this.txtUsername.Name = "txtUsername";
+			this.txtUsername.Size = new System.Drawing.Size(306, 23);
+			this.txtUsername.TabIndex = 1;
+			this.txtUsername.Text = "Username / Email";
+			this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
+			this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = global::Login.Properties.Resources.user;
+			this.pictureBox1.Location = new System.Drawing.Point(301, 16);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(144, 126);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
+			// 
+			// panel2
+			// 
+			this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
+			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel2.Location = new System.Drawing.Point(0, 0);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(960, 209);
+			this.panel2.TabIndex = 1;
+			// 
+			// contextMenuStrip1
+			// 
+			this.contextMenuStrip1.Name = "contextMenuStrip1";
+			this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+			// 
+			// contextMenuStrip2
+			// 
+			this.contextMenuStrip2.Name = "contextMenuStrip2";
+			this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,8 +131,8 @@
 			this.Controls.Add(this.panel2);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Form1";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form1";
-			this.Load += new System.EventHandler(this.Form1_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
